@@ -306,21 +306,6 @@ class ProtectedView(APIView):
     def get(self, request):
         return Response({"message": "This is a protected view"})
 ```
-
-## Common Issues and Solutions
-
-### 1. AssertionError: The field 'password' was declared on serializer...
-
-- Ensure the field is included in the `fields` list in the serializer's Meta class.
-
-### 2. create() did not return an object instance
-
-- Make sure the `create()` method returns the created object.
-
-### 3. Authentication credentials were not provided
-
-- Include the `Authorization: Bearer <token>` header for protected endpoints.
-
 ## Additional Configuration
 
 ### JWT Settings
